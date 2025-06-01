@@ -1,25 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-blue
-  labels:
-    app: myapp
-    version: blue
+  name: myapp
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: myapp
-      version: blue
+      version: PLACEHOLDER
   template:
     metadata:
       labels:
         app: myapp
-        version: blue
+        version: PLACEHOLDER
     spec:
       containers:
       - name: myapp
-        image: nginx:1.19
+        image: 891376976638.dkr.ecr.eu-north-1.amazonaws.com/myapp:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
 

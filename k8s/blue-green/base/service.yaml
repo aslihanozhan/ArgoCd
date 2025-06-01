@@ -5,9 +5,8 @@ metadata:
 spec:
   selector:
     app: myapp
-    version: green   # switch the cloure in here
+    version: green
   ports:
   - port: 80
-    targetPort: 80
-  type: NodePort
+    targetPort: 3000
 
