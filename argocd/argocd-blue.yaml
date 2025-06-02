@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-blue
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/aslihanozhan/ArgoCd
+    targetRevision: main
+    path: k8s/blue-green/blue
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
