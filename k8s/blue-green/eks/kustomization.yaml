@@ -3,5 +3,5 @@ resources:
     - service.yaml
 
 patchesStrategicMerge:
-    - patch-green.yaml
+    - patch-eks.yaml
 
