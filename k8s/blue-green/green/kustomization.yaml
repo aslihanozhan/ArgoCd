@@ -1,5 +1,7 @@
+# kustomization.yaml
 resources:
-  - ../base
+  - deployment.yaml
+  - service.yaml
 
 patchesStrategicMerge:
   - patch-green.yaml
