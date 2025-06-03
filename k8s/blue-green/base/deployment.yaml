@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: 891376976638.dkr.ecr.eu-north-1.amazonaws.com/myapp:latest
+        image: gcr.io/primeval-mark-378114/myapp:latest
         ports:
         - containerPort: 3000
 

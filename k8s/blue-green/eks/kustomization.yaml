@@ -1,7 +1,7 @@
 resources:
-  - ../base/deployment.yaml
-  - ../base/service.yaml
+    - deployment.yaml
+    - service.yaml
 
 patchesStrategicMerge:
-  - patch-eks.yaml
+    - patch-green.yaml
 
