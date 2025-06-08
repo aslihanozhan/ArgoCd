@@ -3,9 +3,6 @@ kind: Deployment
 metadata:
   name: myapp
 spec:
-  selector:
-    matchLabels:
-      version: green
   template:
     metadata:
       labels:
@@ -14,4 +11,7 @@ spec:
       containers:
         - name: myapp
           image: gcr.io/primeval-mark-378114/myapp:latest
+  selector:
+    matchLabels:
+      version: green
 
