@@ -1,6 +1,8 @@
 resources:
-  - ../../base
+    - ../base
 
-patchesStrategicMerge:
-    - patch-eks.yaml
+patches:
+    - path: patch-eks.yaml
+
+
 
