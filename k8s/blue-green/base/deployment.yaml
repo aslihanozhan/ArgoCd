@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gcr.io/primeval-mark-378114/myapp:latest
         ports:
         - containerPort: 3000
 
