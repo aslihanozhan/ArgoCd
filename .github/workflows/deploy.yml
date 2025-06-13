@@ -5,12 +5,16 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   IMAGE_NAME: myapp
   GCP_PROJECT_ID: primeval-mark-378114
   GCR_REGISTRY: gcr.io
   AWS_REGION: eu-north-1
-  AWS_ECR_REGISTRY: 891376976638.dkr.ecr.eu-north-1.amazonaws.com
+  AWS_ECR_REGISTRY: 065217600364.dkr.ecr.eu-north-1.amazonaws.com
 
 jobs:
   build-and-deploy:
@@ -35,7 +39,7 @@ jobs:
     - name: Authenticate to AWS by cridentials via OIDC
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        role-to-assume: arn:aws:iam::891376976638:role/github-actions-oidc-role
+        role-to-assume: arn:aws:iam::065217600364:role/github-actions-oidc-role
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
